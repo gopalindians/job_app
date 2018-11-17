@@ -16,11 +16,11 @@ class AddOtherColumnsToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('gender');
-            $table->string('phone');
-            $table->string('address');
-            $table->string('hourly_price');
-            $table->string('profession');
+            $table->string('gender')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
+            $table->string('hourly_price')->nullable();
+            $table->string('profession')->nullable();
             $table->boolean('is_active')->default(1);
         });
     }

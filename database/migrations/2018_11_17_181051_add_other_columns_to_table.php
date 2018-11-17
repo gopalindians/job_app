@@ -15,10 +15,10 @@ class AddOtherColumnsToTable extends Migration
     {
         Schema::table('jobs', function (Blueprint $table) {
             $table->bigInteger('job_posted_by')->unsigned();
-            $table->string('job_location');
-            $table->float('job_hourly_price');
-            $table->float('job_duration');
-            $table->boolean('is_active');
+            $table->string('job_location')->nullable();
+            $table->float('job_hourly_price')->nullable();
+            $table->float('job_duration')->nullable();
+            $table->boolean('is_active')->default(1);
         });
     }
 
