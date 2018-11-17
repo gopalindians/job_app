@@ -22,3 +22,6 @@ Route::get('/admin/job/{job_id}','AdminController@showJob');
 Route::get('/admin/job/{job_id}/edit','AdminController@editJob');
 Route::post('/admin/job/{job_id}/edit','AdminController@updateJob');
 Route::get('/admin/job/{job_id}/delete','AdminController@deleteJob');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
